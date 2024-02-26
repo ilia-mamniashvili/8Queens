@@ -41,20 +41,20 @@ namespace ConsoleApp
                 return true;
             }
 
-            bool res = false;
+            bool result = false;
             for (int i = 0; i < 8; i++)
             {
                 if (IsSafe(board, i, j))
                 {
                     board[i, j] = 1;
 
-                    res = GenerateQueen(board, j + 1);
+                    result = GenerateQueen(board, j + 1);
 
                     board[i, j] = 0; 
                 }
             }
 
-            return res;
+            return result;
         }
         public static bool IsSafe(int[,] board, int row, int col)
         {
